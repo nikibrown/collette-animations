@@ -1,0 +1,270 @@
+:root {
+	--brand-primary: #3a065d;
+	--brand-green: #41a748;
+	--brand-blue: #0064b0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	background: var(--brand-primary);
+	color: #fff;
+	font-family: helvetica, sans-serif;
+	padding: 100px;
+}
+
+h2 {
+	margin-bottom: 100px;
+}
+
+section {
+	padding: 100px;
+}
+
+/* global styles */
+
+.glow-dot {
+	background-color: var(--brand-green);
+	box-shadow: 0 0 15px 7px var(--brand-blue);
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+	z-index: 2;
+	opacity: 1;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+}
+
+.home-animation-1 {
+	width: 595px;
+	height: 512px;
+	background-image: url(https://assets.codepen.io/657/home-animation-1.png);
+	background-repeat: no-repeat;
+	position: relative;
+
+	&:before {
+		background-image: url(https://assets.codepen.io/657/home-animation-1-top-layer.png);
+		content: "";
+		position: absolute;
+		z-index: 999;
+		top: 0;
+		right: 0;
+		left: 0;
+		bottom: 0;
+		/* 		background: rgba(255, 255, 255, 0.5); */
+	}
+
+	svg {
+		height: 500px;
+		width: 500px;
+	}
+
+	.glow-dot {
+		opacity: 0;
+
+		&.show-dot {
+			opacity: 1;
+		}
+
+		&.show-text:after {
+			opacity: 1;
+		}
+
+		&#dot1:after {
+			left: -120px;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 110px;
+		}
+
+		&#dot2:after {
+			right: -120px;
+			bottom: -50px;
+			width: 110px;
+		}
+
+		&#dot3:after {
+			right: -120px;
+			top: -40px;
+			width: 110px;
+		}
+	}
+
+	.glow-dot:after {
+		content: attr(data-content);
+		opacity: 0;
+		margin: 0;
+		transition: opacity 0.15s linear;
+		color: #fff;
+		font-family: "din-condensed", sans-serif;
+		font-size: 16px;
+		text-align: center;
+		position: absolute;
+	}
+}
+
+.home-animation-2 {
+	margin: 0 auto;
+	/* width: 1280px; */
+
+	.glow-dot {
+		opacity: 0;
+	}
+
+	.line-container {
+		position: relative;
+
+		.line {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.animation-line {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.line {
+		background: rgb(0, 199, 206);
+		background: linear-gradient(90deg, rgba(0, 199, 206, 1) 0%, rgba(91, 27, 135, 1) 100%);
+		width: 1000px;
+		height: 8px;
+	}
+
+	.headline {
+		color: #fff;
+		font-size: 40px;
+		margin-bottom: 50px;
+	}
+
+	.glow-dot {
+		/* background-color: #41a748;
+		box-shadow: 0 0 15px 7px #0064b0;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		z-index: 2; */
+		opacity: 0;
+		/* display: inline-block;
+		margin: 0 auto;
+		position: relative;
+		display: block; */
+
+		&:after {
+			display: block;
+			content: attr(data-content);
+			opacity: 0;
+			transition: opacity 0.15s linear;
+			color: #fff;
+			font-family: "din-condensed", sans-serif;
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+			position: absolute;
+			bottom: -50px;
+			left: -100%;
+			white-space: nowrap;
+		}
+
+		&.show-dot {
+			opacity: 1;
+		}
+
+		&.show-text:after {
+			opacity: 1;
+		}
+	}
+}
+
+.home-animation-3 {
+	width: 398px;
+	height: 398px;
+	background-image: url(https://assets.codepen.io/657/ch-who-are-we-768x768.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+
+	svg {
+		width: 398px;
+		height: 398px;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+}
+
+.solutions-animation-4 {
+	.icons {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	.glow-dot {
+		opacity: 0;
+	}
+
+	.line-container {
+		position: relative;
+
+		.line {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.animation-line {
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+
+	.line {
+		background: rgb(0, 199, 206);
+		background: linear-gradient(90deg, rgba(0, 199, 206, 1) 0%, rgba(91, 27, 135, 1) 100%);
+		width: 1000px;
+		height: 8px;
+	}
+
+	.headline {
+		color: #fff;
+		font-size: 40px;
+		margin-bottom: 50px;
+	}
+
+	.glow-dot {
+		opacity: 0;
+
+		&:after {
+			display: block;
+			content: attr(data-content);
+			opacity: 0;
+			transition: opacity 0.15s linear;
+			color: #fff;
+			font-family: "din-condensed", sans-serif;
+			font-size: 18px;
+			font-weight: bold;
+			text-align: center;
+			position: absolute;
+			bottom: -50px;
+			left: -100%;
+			white-space: nowrap;
+		}
+
+		&.show-dot {
+			opacity: 1;
+		}
+
+		&.show-text:after {
+			opacity: 1;
+		}
+	}
+}
