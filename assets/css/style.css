@@ -2,6 +2,7 @@
 	--brand-primary: #3a065d;
 	--brand-green: #41a748;
 	--brand-blue: #0064b0;
+	--brand-light: #fff;
 }
 
 html {
@@ -10,7 +11,7 @@ html {
 
 body {
 	background: var(--brand-primary);
-	color: #fff;
+	color: var(--brand-light);
 	font-family: helvetica, sans-serif;
 	padding: 100px;
 }
