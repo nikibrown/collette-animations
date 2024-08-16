@@ -104,7 +104,7 @@ function dotsAnimate2() {
 	);
 }
 
-dotsAnimate2(); // Start the animation
+dotsAnimate2();
 
 /* Animated Dots 3 */
 
@@ -133,8 +133,37 @@ dotsAnimate3();
 
 /* Animated Dots 4 */
 
-const animatedDots4 = document.querySelectorAll(".section-animation-4 .glow-dot");
-const animation4 = document.querySelector(".solutions-animation-4");
+// const animatedDots4 = document.querySelectorAll(".animation-4 .glow-dot");
+
+// const endvalue1 = 1 / 6;
+// const endvalue3 = 5 / 6;
+
+// const endValues4 = [endvalue1, 0.5, endvalue3];
+// const delayValues4 = [0, 1, 3];
+// const durationValues4 = [0.5, 1.5, 1.2];
+
+// function dotsAnimate4() {
+// 	animatedDots4.forEach(function (dot, index) {
+// 		gsap.to(dot, {
+// 			duration: durationValues2[index],
+// 			delay: delayValues2[index],
+// 			onStart: showDot,
+// 			onComplete: showText,
+// 			motionPath: {
+// 				align: "#path4",
+// 				alignOrigin: [0.5, 0.5],
+// 				path: "#path4",
+// 				start: 0,
+// 				end: endValues4[index],
+// 				ease: "power1.inOut",
+// 			},
+// 		});
+// 	});
+// }
+
+// dotsAnimate4();
+
+const animatedDots4 = document.querySelectorAll(".animation-4 .glow-dot");
 
 const endvalue1 = 1 / 6;
 const endvalue3 = 5 / 6;
@@ -142,24 +171,40 @@ const endvalue3 = 5 / 6;
 const endValues4 = [endvalue1, 0.5, endvalue3];
 const delayValues4 = [0, 1, 3];
 const durationValues4 = [0.5, 1.5, 1.2];
+const cycleDelay4 = 3;
 
 function dotsAnimate4() {
+	const timeline = gsap.timeline();
+
 	animatedDots4.forEach(function (dot, index) {
-		gsap.to(dot, {
-			duration: durationValues2[index],
-			delay: delayValues2[index],
-			onStart: showDot,
-			onComplete: showText,
-			motionPath: {
-				align: "#path4",
-				alignOrigin: [0.5, 0.5],
-				path: "#path4",
-				start: 0,
-				end: endValues4[index],
-				ease: "power1.inOut",
+		timeline.to(
+			dot,
+			{
+				duration: durationValues4[index],
+				delay: delayValues4[index],
+				onStart: showDot,
+				onComplete: showText,
+				motionPath: {
+					align: "#path4",
+					alignOrigin: [0.5, 0.5],
+					path: "#path4",
+					start: 0,
+					end: endValues4[index],
+					ease: "power1.inOut",
+				},
 			},
-		});
+			0
+		);
 	});
+
+	// Call hideDotsAndText after the animation completes, then delay before restarting
+	timeline.call(
+		function () {
+			hideDotsAndText(animatedDots4, dotsAnimate4);
+		},
+		null,
+		`+=${cycleDelay4}`
+	);
 }
 
 dotsAnimate4();
