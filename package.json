@@ -1,0 +1,26 @@
+{
+	"name": "colleteanimations",
+	"version": "1.0.0",
+	"description": "Starter Project site",
+	"main": "animations.html",
+	"scripts": {
+		"dev": "gulp"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/nikibrown/collette-animations.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/nikibrown/collette-animations/issues"
+	},
+	"homepage": "https://github.com/nikibrown/collette-animations",
+	"devDependencies": {
+		"gulp-sass": "^5.1.0",
+		"sass": "^1.46.0"
+	},
+	"dependencies": {
+		"gulp": "^4.0.2"
+	}
+}
