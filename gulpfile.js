@@ -7,5 +7,5 @@ function style() {
 }
 
 exports.default = function () {
-	gulp.watch("./assets/scss/**/*").on("change", series(style));
+	gulp.watch("./assets/css/style.scss").on("change", series(style));
 };

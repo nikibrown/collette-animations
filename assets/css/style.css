@@ -1,0 +1,387 @@
+:root {
+  --brand-primary: #3a065d;
+  --brand-green: #41a748;
+  --brand-blue: #0064b0;
+  --brand-light: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--brand-primary);
+  color: var(--brand-light);
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+}
+
+h2 {
+  margin-bottom: 100px;
+}
+
+section {
+  padding: 100px;
+}
+
+/* global styles */
+.glow-dot {
+  background-color: var(--brand-green);
+  box-shadow: 0 0 15px 7px var(--brand-blue);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 1;
+  display: block;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Animation 1 */
+.animation-1-mobile {
+  display: block;
+}
+.animation-1-mobile img {
+  height: auto;
+  width: 100%;
+}
+
+.animation-1 {
+  display: none;
+}
+
+@media (min-width: 981px) {
+  .animation-1-mobile {
+    display: none;
+  }
+  .animation-1 {
+    display: block;
+    width: 595px;
+    height: 512px;
+    background-image: url(https://collettedev.flywheelsites.com/wp-content/uploads/2024/08/home-animation-1.webp);
+    background-repeat: no-repeat;
+    position: relative;
+    margin-left: 200px;
+  }
+  .animation-1:before {
+    background-image: url(https://collettedev.flywheelsites.com/wp-content/uploads/2024/08/home-animation-1-top-layer.webp);
+    content: "";
+    position: absolute;
+    z-index: 999;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .animation-1 svg {
+    height: 500px;
+    width: 500px;
+  }
+  .animation-1 .glow-dot {
+    opacity: 0;
+  }
+  .animation-1 .glow-dot.show-dot {
+    opacity: 1;
+  }
+  .animation-1 .glow-dot.show-text:after {
+    opacity: 1;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+  .animation-1 .glow-dot#dot1:after {
+    left: -120px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 110px;
+  }
+  .animation-1 .glow-dot#dot2:after {
+    right: -120px;
+    bottom: -50px;
+    width: 110px;
+  }
+  .animation-1 .glow-dot#dot3:after {
+    right: -120px;
+    top: -40px;
+    width: 110px;
+  }
+  .animation-1 .glow-dot:after {
+    content: attr(data-content);
+    opacity: 0;
+    margin: 0;
+    transition: opacity 0.15s linear;
+    color: var(--brand-light);
+    font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+    font-size: 16px;
+    text-align: center;
+    position: absolute;
+  }
+}
+/* Animation 2 */
+.animation-2-mobile {
+  display: block;
+}
+.animation-2-mobile ol {
+  padding: 0;
+  margin-left: 75px;
+}
+.animation-2-mobile ol li {
+  color: var(--brand-light);
+  position: relative;
+  margin: 0 0 50px 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+.animation-2-mobile ol li:before {
+  content: "";
+  background-color: var(--brand-green);
+  box-shadow: 0 0 15px 7px var(--brand-blue);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  z-index: 2;
+  opacity: 1;
+  display: block;
+  margin: 0 auto;
+  position: absolute;
+  left: -75px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.animation-2 {
+  display: none;
+}
+
+@media (min-width: 981px) {
+  .animation-2-mobile {
+    display: none;
+  }
+  .animation-2 {
+    display: block;
+    margin: 0 auto;
+    width: 981px;
+  }
+  .animation-2 .glow-dot {
+    opacity: 0;
+  }
+  .animation-2 .line-container {
+    position: relative;
+  }
+  .animation-2 .line-container .line {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .animation-2 .line-container .animation-line {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .animation-2 .line {
+    background: rgb(0, 199, 206);
+    background: linear-gradient(90deg, rgb(0, 199, 206) 0%, rgb(91, 27, 135) 100%);
+    width: 981px;
+    height: 8px;
+  }
+  .animation-2 .headline {
+    color: #fff;
+    font-size: 40px;
+    margin-bottom: 50px;
+  }
+  .animation-2 .glow-dot {
+    opacity: 0;
+  }
+  .animation-2 .glow-dot:after {
+    display: block;
+    content: attr(data-content);
+    opacity: 0;
+    transition: opacity 0.15s linear;
+    color: var(--brand-light);
+    font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    position: absolute;
+    bottom: -50px;
+    left: -100%;
+    white-space: nowrap;
+  }
+  .animation-2 .glow-dot.show-dot {
+    opacity: 1;
+  }
+  .animation-2 .glow-dot.show-text:after {
+    opacity: 1;
+  }
+}
+/* Animation 3 */
+.animation-3-mobile {
+  display: block;
+}
+.animation-3-mobile img {
+  height: auto;
+  width: 100%;
+}
+
+.animation-3 {
+  display: none;
+}
+
+@media (min-width: 981px) {
+  .animation-3-mobile {
+    display: none;
+  }
+  .animation-3 {
+    display: block;
+    width: 398px;
+    height: 398px;
+    background-image: url(https://collettedev.flywheelsites.com/wp-content/uploads/2024/08/ch-who-are-we-768x768-2.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+  .animation-3 svg {
+    width: 398px;
+    height: 398px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+/* Animation 4 */
+.animation-4-mobile {
+  display: block;
+}
+.animation-4-mobile img {
+  display: block;
+  margin: 0 auto;
+}
+.animation-4-mobile h3 {
+  font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-wrap: nowrap;
+  color: var(--brand-light);
+}
+.animation-4-mobile p {
+  color: var(--brand-light);
+}
+
+.animation-4 {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .animation-4-mobile {
+    display: none;
+  }
+  .animation-4 {
+    display: block;
+  }
+  .animation-4 .icons {
+    position: relative;
+  }
+  .animation-4 .glow-dot {
+    opacity: 0;
+  }
+  .animation-4 .line-container {
+    position: relative;
+  }
+  .animation-4 .line-container .animation-line {
+    position: absolute;
+    top: -14px;
+    left: 0;
+  }
+  .animation-4 h3 {
+    font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    text-wrap: nowrap;
+    color: var(--brand-light);
+  }
+  .animation-4 p {
+    color: var(--brand-light);
+  }
+  .animation-4 .glow-dot {
+    opacity: 0;
+  }
+  .animation-4 .glow-dot .dot-text {
+    display: block;
+    opacity: 0;
+    transition: opacity 0.15s linear;
+    text-align: center;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+  }
+  .animation-4 .glow-dot.show-dot {
+    opacity: 1;
+  }
+  .animation-4 .glow-dot.show-text .dot-text {
+    opacity: 1;
+  }
+}
+/* Animation 5 */
+.animation-5-mobile {
+  display: block;
+}
+.animation-5-mobile img {
+  height: auto;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.animation-5 {
+  display: none;
+}
+
+@media (min-width: 1200px) {
+  .animation-5-mobile {
+    display: none;
+  }
+  .animation-5 {
+    display: block;
+    width: 500px;
+    height: 500px;
+    background-image: url(https://collettedev.flywheelsites.com/wp-content/uploads/2024/08/patient-circle-8.webp);
+    background-repeat: no-repeat;
+    position: relative;
+    background-size: cover;
+    margin: 0 auto;
+  }
+  .animation-5 svg {
+    height: 500px;
+    width: 500px;
+  }
+  .animation-5 .glow-dot {
+    opacity: 0;
+  }
+  .animation-5 .glow-dot.show-dot {
+    opacity: 1;
+  }
+  .animation-5 .glow-dot.show-text:after {
+    opacity: 1;
+  }
+  .animation-5 .glow-dot#dot1:after, .animation-5 .glow-dot#dot2:after, .animation-5 .glow-dot#dot3:after, .animation-5 .glow-dot#dot4:after {
+    right: 80px;
+  }
+  .animation-5 .glow-dot#dot5:after, .animation-5 .glow-dot#dot6:after, .animation-5 .glow-dot#dot7:after, .animation-5 .glow-dot#dot8:after {
+    left: 80px;
+  }
+  .animation-5 .glow-dot:after {
+    text-wrap: nowrap;
+    white-space: nowrap;
+  }
+  .animation-5 .glow-dot:after {
+    content: attr(data-content);
+    opacity: 0;
+    margin: 0;
+    transition: opacity 0.15s linear;
+    color: var(--brand-light);
+    font-size: 18px;
+    font-family: "Montserrat", Helvetica, Arial, Lucida, sans-serif;
+    font-weight: bold;
+    position: absolute;
+  }
+}

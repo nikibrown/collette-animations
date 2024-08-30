@@ -65,6 +65,7 @@ section {
 		background-image: url(https://collettedev.flywheelsites.com/wp-content/uploads/2024/08/home-animation-1.webp);
 		background-repeat: no-repeat;
 		position: relative;
+		margin-left: 200px;
 
 		&:before {
 			background-image: url(https://collettedev.flywheelsites.com/wp-content/uploads/2024/08/home-animation-1-top-layer.webp);
@@ -325,7 +326,7 @@ section {
 
 			.animation-line {
 				position: absolute;
-				top: -5px;
+				top: -14px;
 				left: 0;
 			}
 		}
@@ -354,6 +355,7 @@ section {
 				top: 50px;
 				left: 50%;
 				transform: translateX(-50%);
+				width: 320px;
 			}
 
 			&.show-dot {
@@ -431,6 +433,7 @@ section {
 
 			&:after {
 				text-wrap: nowrap;
+				white-space: nowrap;
 			}
 		}
 
