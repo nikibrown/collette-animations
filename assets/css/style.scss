@@ -62,13 +62,13 @@ section {
 		display: block;
 		width: 595px;
 		height: 512px;
-		background-image: url(https://collettedev.flywheelsites.com/wp-content/uploads/2024/08/home-animation-1.webp);
+		background-image: url(../img/home-animation-1.webp);
 		background-repeat: no-repeat;
 		position: relative;
 		margin-left: 200px;
 
 		&:before {
-			background-image: url(https://collettedev.flywheelsites.com/wp-content/uploads/2024/08/home-animation-1-top-layer.webp);
+			background-image: url(../img/home-animation-1-top-layer.webp);
 			content: "";
 			position: absolute;
 			z-index: 999;
@@ -264,7 +264,7 @@ section {
 		display: block;
 		width: 398px;
 		height: 398px;
-		background-image: url(https://collettedev.flywheelsites.com/wp-content/uploads/2024/08/ch-who-are-we-768x768-2.webp);
+		background-image: url(../img/ch-who-are-we-768x768-2.webp);
 		background-size: cover;
 		background-repeat: no-repeat;
 		position: relative;
@@ -395,7 +395,7 @@ section {
 		display: block;
 		width: 500px;
 		height: 500px;
-		background-image: url(https://collettedev.flywheelsites.com/wp-content/uploads/2024/08/patient-circle-8.webp);
+		background-image: url(../img/patient-circle-8.webp);
 		background-repeat: no-repeat;
 		position: relative;
 		background-size: cover;
